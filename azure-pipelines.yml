@@ -1,7 +1,7 @@
 trigger:
 - '*'
 
-pool: Davids-Air
+pool: default
 
 variables:
   buildConfiguration: 'Release'
