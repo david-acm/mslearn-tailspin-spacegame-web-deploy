@@ -1,6 +1,8 @@
 trigger:
 - '*'
 
+pool: 'azure spot'
+
 variables:
   buildConfiguration: 'Release'
 
