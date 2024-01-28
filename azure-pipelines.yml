@@ -1,6 +1,8 @@
 trigger:
 - '*'
 
+pool: Davids-Air
+
 variables:
   buildConfiguration: 'Release'
 
