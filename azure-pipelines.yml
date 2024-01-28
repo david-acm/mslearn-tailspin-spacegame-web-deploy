@@ -1,7 +1,7 @@
 trigger:
 - '*'
 
-pool: default
+pool: my-personal-computer
 
 variables:
   buildConfiguration: 'Release'
