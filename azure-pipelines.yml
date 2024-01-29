@@ -1,8 +1,6 @@
 trigger:
 - '*'
 
-pool: 'azure spot'
-
 variables:
   buildConfiguration: 'Release'
 
@@ -13,6 +11,7 @@ stages:
   - job: 'Build'
     displayName: 'Build job'
     pool:
+      name: 'azure spot'
       vmImage: 'ubuntu-20.04'
       demands:
       - npm
@@ -74,6 +73,7 @@ stages:
   jobs:
   - deployment: Deploy
     pool:
+      name: 'azure spot'
       vmImage: 'ubuntu-20.04'
     environment: dev
     variables:
@@ -97,6 +97,7 @@ stages:
   jobs:
   - deployment: Deploy
     pool:
+      name: 'azure spot'
       vmImage: 'ubuntu-20.04'
     environment: test
     variables:
@@ -120,6 +121,7 @@ stages:
   jobs:
   - deployment: Deploy
     pool:
+      name: 'azure spot'
       vmImage: 'ubuntu-20.04'
     environment: staging
     variables:
